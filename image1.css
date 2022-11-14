@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+  --red:#ff3838;
+}
+
+*{
+  font-family: 'Nunito', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition:all .2s linear;
+}
+
+*::selection{
+  background:var(--red);
+  color:#fff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #000;
+    padding: 1.5rem 9%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+    -webkit-transform: translateY(-20rem);
+            transform: translateY(-20rem);
+  }
+  
+  .header.active {
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+  
+  .header .logo {
+    font-size: 2.5rem;
+    color: #5DA7DB;
+    text-transform: capitalize;
+  }
+  
+  .header .navbar a {
+    font-size: 2rem;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 0 1.5rem;
+  }
+  
+  .header .navbar a:hover {
+    color: #0097e6;
+  }
+  
+  .header .icons div,
+  .header .icons a {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    background: #fff;
+    color: #000;
+    margin-left: .5rem;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .header .icons div:hover,
+  .header .icons a:hover {
+    background: #0097e6;
+    color: #fff;
+  }
+  
+  .header #menu-btn {
+    display: none;
+  }
+  
+  .header .search-form {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 9%;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+    height: 6rem;
+    gap: 1rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  
+  .header .search-form.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  .header .search-form input {
+    width: 100%;
+    background: none;
+    color: #fff;
+    font-size: 1.8rem;
+  }
+  
+  .header .search-form label {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .header .search-form label:hover {
+    color: #0097e6;
+  }
+
+.order .row{
+    padding:2rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    background-image:url(home-bg.jpg);
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    border-radius: .5rem;
+  }
+  
+  .order .row .image{
+    flex:1 1 30rem;
+  }
+  
+  .order .row .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+  }
+  
+  .order .row form{
+    flex:1 1 50rem;
+    padding:1rem;
+  }
+  
+  .order .row form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .order .row form .inputBox input, .order .row form textarea{
+    padding:1rem;
+    margin:1rem 0;
+    font-size: 1.7rem;
+    color:#333;
+    text-transform: none;
+    border:.1rem solid rgba(0,0,0,.3);
+    border-radius: .5rem;
+    width:49%;
+  }
+  
+  .order .row form textarea{
+    width:100%;
+    resize: none;
+    height:15rem;
+  }
+  
+  .order .row form .btn{
+    background:none;
+  }
+  
+  .order .row form .btn:hover{
+    background:var(--red);
+  }
+
+  .order .row .text h1{
+    font-size: 5vh;
+    color: #fff;
+  }
+
+  .order .row .text p{
+    font-size: 3vh;
+    color: #fff;
+  }
+
+  button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+   
+   button:hover {
+    color: #e8e8e8;
+   }
+   
+   button:hover::before {
+    width: 100%;
+   }
+
+
+  /* media queries  */
+
+@media(max-width:991px){
+
+    html{
+      font-size: 55%;
+    }
+  
+    header{
+      padding:2rem;
+    }
+  
+    section{
+      padding:2rem;
+    }
+  
+  }
+  
+  @media(max-width:768px){
+  
+    #menu-bar{
+      display: initial;
+    }
+  
+    header .navbar{
+      position: absolute;
+      top:100%; left: 0; right:0;
+      background: #f7f7f7;
+      border-top: .1rem solid rgba(0,0,0,.1);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+  
+    header .navbar.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+  
+    header .navbar a{
+      margin: 1.5rem;
+      padding:1.5rem;
+      display: block;
+      border:.2rem solid rgba(0,0,0,.1);
+      border-left:.5rem solid var(--red);
+      background:#fff;
+    }
+  
+  }
+  
+  @media(max-width:450px){
+  
+    html{
+      font-size: 50%;
+    }
+  
+    .order .row form .inputBox input{
+      width:100%;
+    }
+  
+  }
